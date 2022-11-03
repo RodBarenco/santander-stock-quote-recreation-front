@@ -1,0 +1,14 @@
+<div class="stock-card-container" [class.negative-variation]="stock.variation < 0">
+  <div class="stock-info">
+   <h2>{{stock.name}}</h2>
+   <p>{{stock.date}}</p>
+  </div>
+
+  <div class="stock-variation">
+   <samp class="value">{{stock.price | currency:'BRL'}}</samp>
+   <samp class="variation" [class.negative-variation-text]="stock.variation < 0">
+    {{variation}}</samp>
+  </div>
+</div>
+
+
